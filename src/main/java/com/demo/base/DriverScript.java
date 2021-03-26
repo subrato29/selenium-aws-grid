@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import com.demo.actions.TestEngine;
-import com.demo.support.SauceSupport;
+import com.demo.support.RemoteGridSupport;
 import com.demo.support.WebDriverFactory;
 import com.demo.support.Xls_Reader;
 import com.demo.util.Util;
@@ -34,7 +34,7 @@ public class DriverScript {
 					if (platform.toUpperCase().equals("LOCAL")) {
 						WebDriverFactory.initialize();
 					} else if (platform.toUpperCase().equals("GRID")) {
-						SauceSupport.setUp(BROWSER, tcId);
+						RemoteGridSupport.setUp(BROWSER, tcId);
 					}
 					return true;
 				}

@@ -1,20 +1,15 @@
 package com.demo.support;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import com.demo.base.DriverScript;
-import com.demo.util.Util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SauceSupport extends DriverScript {
+public class RemoteGridSupport extends DriverScript {
     public static String GRID_REMOTE_URL = null;
 
     public static void setUp(String browser, String methodName) {
